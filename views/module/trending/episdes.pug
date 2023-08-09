@@ -1,0 +1,26 @@
+.episdes
+  .episdes-choices
+    each value in ["All", "Shows", "Episodes"]
+      span.episdes-choices-choice= value
+  .episdes-top
+    .episdes-top-left 
+      h4.episdes-top-left-heading Trending episdes
+      span.episdes-top-left-text The Most Popula Podcast episodes overall now. Last updated 2 hours ago
+    .episdes-top-right
+        .episdes-top-right-main  Last 1 Weeks
+        ul.episdes-top-right-list
+          each value in ["Last 1 Months", "Last 1 Years", "Last 1 Days", "Recently"]
+            li.episdes-top-right-list-item 
+              span= value  
+  .episdes-bottom
+    .episdes-bottom-contain
+      +episdes("a-1")
+      +episdes("a-2")
+      +episdes("a-3")
+      +episdes("a-4")
+      +episdes("a-5")
+      +episdes("a-6")
+      +episdes("a-7")
+      +episdes("a-8")
+    .episdes-bottom-showmore
+      a(href="#")  Load More

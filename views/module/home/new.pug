@@ -1,0 +1,15 @@
+section.new 
+      .new-option
+        .new-option-left 
+          each value in ["My Feed","Poplar Feed", "Recent"]
+            span.new-option-left-list= value
+        .new-option-right 
+          label.checkbox(for="checkbox")
+            input.checkbox-input(type="checkbox" id="checkbox" name="margen")
+            .checkbox-box
+              .checkbox-box-cr
+          span New Releases & Guests Only
+      .new-list
+        +new("./images/home/avata/1.png 2x", "./images/home/check.png 2x", "James Killened rated an episude", "./images/home/star.png 2x", "Jun 25th", "./images/home/news/1.png 2x", "Perspective Podcast (Ep. 1)", "Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik", "Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...", "11 dayes ago", "45mins 10 Sec")
+        +new("./images/home/avata/1.png 2x", "./images/home/check.png 2x", "James Killened rated an episude", " ", "Jun 25th", "./images/home/news/3.png 2x", "How To & Tips", "UX Design Process: Mental Modeling Framework, How To & Tips", "Nicole is a User Experience Designer passionate about technology startups, cars, education & music. Based in Los Angeles CA., she is a User Experience Designer @ Iconmobile, an award-winning mobile", "11 dayes ago", "45mins 10 Sec")
+        +new("./images/home/avata/1.png 2x", "./images/home/check.png 2x", "James Killened rated an episude", " ", "Jun 25th", "./images/home/news/2.png 2x", "Perspective Podcast (Ep. 1)", "I CAN'T DO THIS | Islam and Mental Health | Full Podcast", "The relationship between mental health and faith is a topic that has long been riddled with confusion, debate, and much misconception.", "11 dayes ago", "45mins 10 Sec")
