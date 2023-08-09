@@ -1,0 +1,7 @@
+@use "../abstracts" as abs;
+.wraper {
+  background-color: abs.$color-main;
+  display: grid;
+  grid-template-columns: 256px 1fr;
+  min-height: 100vh;
+}

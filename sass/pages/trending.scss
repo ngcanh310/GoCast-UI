@@ -1,0 +1,304 @@
+@use "../abstracts" as abs;
+.content {
+  padding: 40px 80px 55px 60px;
+}
+.podcast {
+  margin-bottom: 70px;
+  & .heading {
+    color: abs.$black-1;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 108.333%; /* 108.333% */
+    margin-bottom: 40px;
+  }
+  &-list {
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    color: #fff;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: pink;
+      border-radius: 24px;
+    }
+    &::-webkit-scrollbar-track {
+      border-radius: 24px;
+      background-color: transparent;
+    }
+    &-card {
+      flex: 0 0 628px;
+      background-color: #050f16;
+      border-radius: 24px;
+      scroll-snap-align: center;
+      display: flex;
+      overflow: hidden;
+      &-img {
+        flex-shrink: 0;
+      }
+      &-title {
+        @include abs.fl(flex-start, start, 22px);
+        flex-direction: column;
+        margin: 91.5px 10px 54.5px 32px;
+        &-main {
+          @include abs.fl(flex-start, start, 9px);
+          flex-direction: column;
+          &-1 {
+            color: abs.$color-main;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 131.818%; /* 131.818% */
+          }
+          &-2 {
+            @include abs.fl(flex-start, start, 7px);
+            flex-direction: column;
+            & span {
+              color: abs.$color-main;
+            }
+          }
+        }
+        &-button {
+          cursor: pointer;
+          @include abs.fl(center, center, 8px);
+          padding: 8px 12px;
+          border-radius: 8px;
+          background-color: abs.$color-main;
+          box-shadow: 0px 16px 24px 0px rgba(108, 93, 211, 0.1);
+          & span {
+            color: abs.$black-1;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 146.667%; /* 146.667% */
+          }
+          &:hover {
+            background-color: abs.$primary;
+            & span {
+              color: abs.$color-main;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.episdes {
+  &-choices {
+    @include abs.fl(flex-start, center, 10px);
+    &-choice {
+      margin-bottom: 40px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background-color: abs.$natural-2;
+      cursor: pointer;
+      color: abs.$black-1;
+      &:hover {
+        background-color: abs.$primary;
+        color: abs.$neutral-1;
+      }
+    }
+  }
+  &-top {
+    margin-bottom: 30px;
+    @include abs.fl(space-between, center, 0);
+    &-left {
+      &-heading {
+        margin-bottom: 8px;
+        color: abs.$black-1;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 144.444%; /* 144.444% */
+      }
+      &-text {
+        color: abs.$gray-2;
+      }
+    }
+    &-right {
+      @include abs.fl(center, center, 0);
+      position: relative;
+      &-list {
+        &::before {
+          content: "";
+          display: block;
+          height: 10px;
+        }
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        &:hover {
+          opacity: 1;
+          visibility: visible;
+        }
+        &-item {
+          &:hover {
+            background-color: abs.$primary;
+            color: abs.$neutral-1;
+          }
+          @include abs.fl(center, center, 0);
+          color: abs.$gray-2;
+          background-color: abs.$natural-1;
+          padding: 16px 23px;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 146.667%;
+        }
+      }
+      &-main {
+        cursor: pointer;
+        width: 185px;
+        @include abs.fl(center, center, 0);
+        color: abs.$gray-2;
+        padding: 16px 23px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 146.667%;
+        background-color: abs.$natural-1;
+        &:hover {
+          background-color: abs.$primary;
+          color: abs.$neutral-1;
+        }
+        &:hover + .episdes-top-right-list {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &-bottom {
+    &-contain {
+      display: grid;
+      gap: 30px;
+      margin-bottom: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(0, 477px));
+      &-frame {
+        box-shadow: -10px 24px 35px 0px rgba(227, 230, 236, 0.25),
+          -1px -3px 14px 0px rgba(227, 230, 236, 0.2);
+        position: relative;
+        padding: 20px;
+        border-radius: 20px;
+        @include abs.fl(center, center, 20px);
+        &-content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    &-showmore {
+      @include abs.fl(center, center, 0);
+      & a {
+        color: abs.$black-1;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 146.667%; /* 146.667% */
+        border-radius: 8px;
+        background-color: abs.$natural-2;
+        padding: 8px 16px;
+        &:hover {
+          background-color: abs.$primary;
+          color: abs.$neutral-1;
+        }
+      }
+    }
+  }
+}
+.span-1 {
+  color: #11142d;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%; /* 150% */
+  margin-bottom: 4px;
+}
+.span-2 {
+  margin-bottom: 8px;
+}
+.span-2,
+.span-3,
+.span-4,
+.content-inf-content-acong {
+  color: abs.$gray-2;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 146.154%; /* 146.154% */
+}
+.content-time {
+  @include abs.fl(flex-start, center, 16px);
+  margin-top: 10px;
+}
+.content-inf {
+  margin-top: 25px;
+  @include abs.fl(flex-start, center, 12px);
+  &-heart {
+    display: inline-block;
+    cursor: pointer;
+    &-box {
+      width: 25px;
+      height: 25px;
+      clip-path: polygon(
+        50% 0%,
+        61% 35%,
+        98% 35%,
+        68% 57%,
+        79% 91%,
+        50% 70%,
+        21% 91%,
+        32% 57%,
+        2% 35%,
+        39% 35%
+      );
+      background-color: black;
+    }
+    &-input {
+      display: none;
+      &:checked + .content-inf-heart-box {
+        background-color: pink;
+      }
+    }
+  }
+  &-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  &-content {
+    &-name {
+      margin-bottom: 2px;
+      color: #232333;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+}
+.share {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+}
+.content-time-view,
+.content-time-time {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+.box-1 {
+  clip-path: circle(50% at 50% 50%);
+  width: 6px;
+  height: 6px;
+  background-color: yellow;
+}
+.box-2 {
+  clip-path: circle(50% at 50% 50%);
+  width: 6px;
+  height: 6px;
+  background-color: red;
+}

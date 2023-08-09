@@ -1,0 +1,40 @@
+extends ./views/layouts/dashboard.pug
+include ./views/mixins/mixin.pug
+append styleSheet 
+  link(rel="stylesheet", href="./styles/trending.css")
+block tittle 
+  title GoCast-UI - Trending
+block main
+  .podcast
+    .heading Trending Podcast
+    .podcast-list
+      +podcast("./images/trending/img.png 2x", "Don't Always Win | LifeSpring", "Podcast Episode - 1", "Yahia Md Amin (Chairman - LifeSpring Limited )")
+      +podcast("./images/trending/img.png 2x", "Don't Always Win | LifeSpring", "Podcast Episode - 1", "Yahia Md Amin (Chairman - LifeSpring Limited )")
+      +podcast("./images/trending/img.png 2x", "Don't Always Win | LifeSpring", "Podcast Episode - 1", "Yahia Md Amin (Chairman - LifeSpring Limited )")
+  .episdes
+    .episdes-choices
+      each value in ["All", "Shows", "Episodes"]
+        span.episdes-choices-choice= value
+    .episdes-top
+      .episdes-top-left 
+        h4.episdes-top-left-heading Trending episdes
+        span.episdes-top-left-text The Most Popula Podcast episodes overall now. Last updated 2 hours ago
+    .episdes-bottom
+      .episdes-bottom-contain
+        +episdes("a")
+        +episdes("b")
+        +episdes("c")
+        +episdes("d")
+        +episdes("e")
+        +episdes("f")
+        +episdes("g")
+        +episdes("h")
+      .episdes-bottom-showmore
+        a(href="#")  Load More
+    .episdes-top-right
+        .episdes-top-right-main  Last 1 Weeks
+        ul.episdes-top-right-list
+          each value in ["Last 1 Months", "Last 1 Years", "Last 1 Days", "Recently"]
+            li.episdes-top-right-list-item 
+              span= value  
+    

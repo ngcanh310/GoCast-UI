@@ -1,0 +1,14 @@
+@use "../abstracts" as abs;
+body {
+  font-family: abs.$font-primary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: calc(20 / 14);
+}
+.heading {
+  color: abs.$black-1;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%; /* 150% */
+  margin-bottom: 20px;
+}

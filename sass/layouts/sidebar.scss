@@ -1,0 +1,58 @@
+@use "../abstracts" as abs;
+.sidebar {
+  padding: 48px 30px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #f0f3f6;
+}
+.sidebar-logo {
+  margin-bottom: 44px;
+}
+
+.menu {
+  margin-bottom: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  &-link {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+  }
+  &-item {
+    padding: 8px 30px 8px 20px;
+    border-radius: 12px;
+    &:hover {
+      background-color: #7141ef;
+      transition: all 0.25s linear;
+      & span {
+        color: abs.$color-main;
+      }
+      [fill^="#E5"] {
+        fill: abs.$natural-1;
+        opacity: 1;
+      }
+      [fill^="#A5"] {
+        fill: abs.$primary-shades-4;
+      }
+    }
+  }
+  &-heading {
+    padding: 0 21px;
+    margin-bottom: 10px;
+    color: #8494ab;
+    font-size: 13px;
+    line-height: 146.154%;
+    font-weight: 400;
+  }
+  &:not(:last-child) {
+    border-bottom: 1px solid #e9eef4;
+  }
+  &-text {
+    color: #8494ab;
+    font-weight: 500;
+    line-height: 142.857%; /* 142.857% */
+  }
+}
