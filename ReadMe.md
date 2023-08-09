@@ -1,1 +1,1 @@
-Còn một số file em vẫn đang cần sửa đổi
+Còn một số file em vẫn đang cần sửa đổi đó
