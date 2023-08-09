@@ -126,8 +126,8 @@
           display: block;
           height: 10px;
         }
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 100%;
         left: 0;
@@ -176,7 +176,7 @@
       display: grid;
       gap: 30px;
       margin-bottom: 50px;
-      grid-template-columns: repeat(auto-fit, minmax(0, 477px));
+      grid-template-columns: repeat(auto-fit, minmax(0, 546px));
       &-frame {
         box-shadow: -10px 24px 35px 0px rgba(227, 230, 236, 0.25),
           -1px -3px 14px 0px rgba(227, 230, 236, 0.2);

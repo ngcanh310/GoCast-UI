@@ -25,6 +25,13 @@
     &-name {
       color: abs.$gray-1;
     }
+    &-avata {
+      width: 70px;
+      height: 70px;
+      border-radius: 100rem;
+      box-shadow: 0 0 0 4px white, 0 0 0 6px pink;
+      background-color: pink;
+    }
   }
 }
 .trending {
@@ -162,6 +169,10 @@
       border-radius: 100rem;
       &-main {
         object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        background-color: pink;
       }
       &-no {
         position: absolute;
@@ -374,9 +385,11 @@
         font-size: 15px;
         font-weight: 500;
         line-height: 146.667%; /* 146.667% */
+        margin-bottom: 10px;
       }
       &-2 {
         @include abs.fl(center, center, 6px);
+        margin-bottom: 20px;
         &-1,
         &-2 {
           color: abs.$gray-2;
