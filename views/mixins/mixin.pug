@@ -130,3 +130,20 @@ mixin episdes(a)
           input(type="checkbox" id= a).content-inf-heart-input
           .content-inf-heart-box
       img(src="./images/trending/icon/share.png", alt="icon").share
+mixin explore(title, span)
+  a(href="/").explore-bottom-box 
+    img(src="./images/explore/retangle.png", alt="retangle").explore-bottom-box-retangle
+    img(src= title, alt="title").explore-bottom-box-top 
+    span.explore-bottom-box-bottom= span
+mixin playlist(img, heading, date, title)
+  .playlist-bottom-box
+    .playlist-bottom-img
+      img(src= img, alt="image")
+    .playlist-bottom-content 
+      .playlist-bottom-content-top
+        .playlist-bottom-content-top-heading= heading
+        span.playlist-bottom-content-top-date= date
+      .playlist-bottom-content-mid= title 
+      .playlist-bottom-content-bot
+        .bot-left 
+        .bot-right

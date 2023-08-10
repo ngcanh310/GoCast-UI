@@ -1,0 +1,8 @@
+extends ./views/layouts/dashboard.pug
+include ./views/mixins/mixin.pug
+append styleSheet 
+  link(rel="stylesheet", href="./styles/playlist.css")
+block tittle 
+  title GoCast-UI - Playlist
+block main
+  include ./views/module/playlist/playlist.pug
