@@ -8,7 +8,65 @@
 .playlist {
   padding: 40px 60px 90px 60px;
   &-top {
+    @include abs.fl(space-between, center, 0);
     margin-bottom: 20px;
+    &-right-title {
+      color: abs.$gray-2;
+      font-weight: 500;
+    }
+    &-left {
+      position: relative;
+      background-color: abs.$natural-1;
+      padding: 10px 23px;
+      cursor: pointer;
+      width: 173px;
+      border-radius: 16px;
+      &:hover {
+        .playlist-top-left-list {
+          opacity: 1;
+          visibility: visible;
+        }
+        background-color: abs.$primary;
+        .playlist-top-left-all {
+          color: abs.$neutral-1;
+          [fill^="#A6"] {
+            fill: abs.$natural-1;
+          }
+        }
+      }
+      &-all {
+        @include abs.fl(space-between, center, 0);
+        color: abs.$gray-2;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.667%; /* 146.667% */
+      }
+      &-list {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: abs.$gray-2;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 146.667%;
+        opacity: 0;
+        visibility: hidden;
+        background-color: abs.$natural-1;
+        border-radius: 16px;
+        &-item {
+          display: flex;
+          justify-content: center;
+          border-radius: inherit;
+          &:hover {
+            background-color: abs.$primary;
+            color: abs.$neutral-1;
+          }
+        }
+      }
+    }
   }
   &-bottom {
     display: grid;
