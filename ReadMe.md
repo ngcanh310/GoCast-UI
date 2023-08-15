@@ -15,4 +15,4 @@ Folder
 
 - mixins: chứa file mixin.pug
 - module: chứa các phần nhỏ bên trong 1 page cho thuận tiện cho việc quản lý, fix bug. như trang page home có 5 section, trong folder - home có 5 file pug con.
-abs
+to be continue ...
