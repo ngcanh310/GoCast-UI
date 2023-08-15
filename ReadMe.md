@@ -11,5 +11,5 @@ Folder
     ++ layouts: chứa các file pug chính, tái sử dụng nhiều lần
       +++ dashboard: bố cục chung của các trang page
     ++ mixins: chứa file mixin.pug
-    ++ module: chứa các phần nhỏ bên trong 1 page để thuận tiện cho việc quản lý, fix bug. như trang page home có 8 section, trong folde ++ home có 8 file pug con.
+    ++ module: chứa các phần nhỏ bên trong 1 page để thuận tiện cho việc quản lý, fix bug. như trang page home có 8 section, trong folde home có 8 file pug con.
 to be continue ...
