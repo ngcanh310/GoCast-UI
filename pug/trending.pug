@@ -1,0 +1,10 @@
+extends ./views/layouts/dashboard.pug
+include ./views/mixins/mixin.pug
+append styleSheet 
+  link(rel="stylesheet", href=".././disk/styles/trending.css")
+block tittle 
+  title GoCast-UI - Trending
+block main
+  include ./views/module/trending/podcast.pug
+  include ./views/module/trending/episdes.pug
+    

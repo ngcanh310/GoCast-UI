@@ -1,0 +1,8 @@
+extends ./views/layouts/dashboard.pug
+include ./views/mixins/mixin.pug
+append styleSheet 
+  link(rel="stylesheet", href=".././disk/styles/explore.css")
+block tittle 
+  title GoCast-UI - Explore
+block main
+  include ./views/module/explore/explore-items.pug

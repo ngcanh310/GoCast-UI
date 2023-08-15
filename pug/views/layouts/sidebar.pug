@@ -1,0 +1,14 @@
+aside.sidebar
+  a.sidebar-logo(href= "/")
+    img(src=".././disk/images/logo.png", alt="logo")
+  ul.menu
+    each value in [{text: "Home", img:"home", href: "/"}, {text:"Trending", img:"trend", href: "./trending.html"}, {text: "Explore Topics", img:"explore",href: "./explore.html"}, {text: "Playlist", img:"playlist", href: "./playlist.html"}, {text: "Subscriptions", img:"sub" , href: "./sub.html"},]
+      +menu(value.text, value.img, value.href)
+  ul.menu  
+    h3.menu-heading Podcasters
+    each value in [{text: "Dashboard", img: "dash"},{text: "Episodes", img:"ep"},{text: "Team", img:"team"} ,{text: "Subscribers", img:"subs"}]
+      +menu(value.text, value.img)
+  ul.menu  
+    h3.menu-heading Community
+    each value in [{text: "Leaderboard", img:"lead"}]
+      +menu(value.text, value.img)
