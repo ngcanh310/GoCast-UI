@@ -1,4 +1,4 @@
--: cha, +: con, \*: con của con.
+-: cha, +: con, \*: con của +.
 Folder
 -images: chứa ảnh
 
