@@ -1,8 +1,8 @@
 aside.sidebar
   a.sidebar-logo(href= "/")
-    img(src=".././disk/images/logo.png", alt="logo")
+    img(src=".././images/logo.png", alt="logo")
   ul.menu
-    each value in [{text: "Home", img:"home", href: "/"}, {text:"Trending", img:"trend", href: "./trending.html"}, {text: "Explore Topics", img:"explore",href: "./explore.html"}, {text: "Playlist", img:"playlist", href: "./playlist.html"}, {text: "Subscriptions", img:"sub" , href: "./sub.html"},]
+    each value in [{text: "Home", img:"home", href: "./index.html"}, {text:"Trending", img:"trend", href: "./trending.html"}, {text: "Explore Topics", img:"explore",href: "./explore.html"}, {text: "Playlist", img:"playlist", href: "./playlist.html"}, {text: "Subscriptions", img:"sub" , href: "./sub.html"},]
       +menu(value.text, value.img, value.href)
   ul.menu  
     h3.menu-heading Podcasters

@@ -45,7 +45,7 @@ mixin new(img1, img2, name, rate, date, imgmain, span1, span2, span3, time1, tim
               img(srcSet = rate, alt="icon")    
         .news-top-text-date= date
       .news-top-more
-        img(srcSet=".././disk/images/home/more.png 2x", alt="icon")
+        img(srcSet=".././images/home/more.png 2x", alt="icon")
     .news-content 
       img.news-content-img(srcSet=imgmain, alt="music")
       .news-content-more 
@@ -53,19 +53,19 @@ mixin new(img1, img2, name, rate, date, imgmain, span1, span2, span3, time1, tim
         span.more-2= span2
         .more-3 
           .more-3-date
-            img(srcSet=".././disk/images/home/time-cr.png 2x", alt="icon").more-3-date-img
+            img(srcSet=".././images/home/time-cr.png 2x", alt="icon").more-3-date-img
             span.more-3-date-text= time1
           .more-3-time
-            img(srcSet=".././disk/images/home/timer.png 2x", alt="icon").more-3-time-img
+            img(srcSet=".././images/home/timer.png 2x", alt="icon").more-3-time-img
             span.more-3-time-text= time2
         span.more-4= span3
-        img(srcSet=".././disk/images/home/share.png 2x", alt="icon").more-5
+        img(srcSet=".././images/home/share.png 2x", alt="icon").more-5
     .news-footer 
       .news-footer-left
-        each value in [".././disk/images/home/heart.png 2x", ".././disk/images/home/magic-star.png 2x", ".././disk/images/home/music.png 2x"]
+        each value in [".././images/home/heart.png 2x", ".././images/home/magic-star.png 2x", ".././images/home/music.png 2x"]
           img(srcSet= value, alt="icon")
       .news-footer-right
-        img(srcSet=".././disk/images/home/play-1.png 2x", alt="icon").news-footer-right-img
+        img(srcSet=".././images/home/play-1.png 2x", alt="icon").news-footer-right-img
         span.news-footer-right-text Play Episode
 mixin suggest(name, img, acong, ok)
   .right-1-inf-contain
@@ -85,10 +85,10 @@ mixin list(img, span1, span2, span3, span4)
       span.right-2-list-box-2= span2
       .right-2-list-box-items 
         .right-2-list-box-items-1
-          img(srcSet=".././disk/images/home/play-2.png 2x", alt="icon")
+          img(srcSet=".././images/home/play-2.png 2x", alt="icon")
           span= span3
         .right-2-list-box-items-1
-          img(srcSet=".././disk/images/home/heart.png 2x", alt="icon")
+          img(srcSet=".././images/home/heart.png 2x", alt="icon")
           span= span4
 mixin topic(img,  tittle,span)
   .right-3-topic-box 
@@ -105,12 +105,12 @@ mixin podcast(img, title1, title2, title3)
           span.podcast-list-card-title-main-2-top= title2
           span.podcast-list-card-title-main-2-bottom= title3
       .podcast-list-card-title-button
-        img(srcSet=".././disk/images/trending/icon/play-1.png 2x", alt="icon")
+        img(srcSet=".././images/trending/icon/play-1.png 2x", alt="icon")
         span Play Now
     img(srcSet= img, alt="image").podcast-list-card-img
 mixin episdes(a)
   .episdes-bottom-contain-frame 
-    img(srcSet=".././disk/images/trending/host.png 2x", alt="image").episdes-bottom-contain-frame-img 
+    img(srcSet=".././images/trending/host.png 2x", alt="image").episdes-bottom-contain-frame-img 
     .episdes-bottom-contain-frame-content
       span.span-1 SHOULD I MIGRATE?
       span.span-2 Perspective Podcast 
@@ -122,17 +122,17 @@ mixin episdes(a)
           .box-2
           span.span-4 1 week ago
       .content-inf 
-        img(srcSet=".././disk/images/trending/1.png", alt="avata").content-inf-img
+        img(srcSet=".././images/trending/1.png", alt="avata").content-inf-img
         .content-inf-content
           .content-inf-content-name Thomas L. Fletcher
           .content-inf-content-acong  @thomaslfletcher
         label(for= a).content-inf-heart
           input(type="checkbox" id= a).content-inf-heart-input
           .content-inf-heart-box
-      img(src=".././disk/images/trending/icon/share.png", alt="icon").share
+      img(src=".././images/trending/icon/share.png", alt="icon").share
 mixin explore(title, span)
   a(href="#").explore-bottom-box 
-    img(src=".././disk/images/explore/retangle.png", alt="retangle").explore-bottom-box-retangle
+    img(src=".././images/explore/retangle.png", alt="retangle").explore-bottom-box-retangle
     img(src= title, alt="title").explore-bottom-box-top 
     span.explore-bottom-box-bottom= span
 mixin playlist(img, heading, date, title)
