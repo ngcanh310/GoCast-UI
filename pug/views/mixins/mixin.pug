@@ -31,19 +31,22 @@ mixin host(name=" ", img)
   .popular-hosts-list
     img(src= img, alt="avata").popular-hosts-list-avata
     span.popular-hosts-list-name= name
-mixin new(img1, img2, name, rate, date, imgmain, span1, span2, span3, time1, time2)
+mixin new(img1, img2, name, inf, rate, date, imgmain, span1, span2, span3, time1, time2)
   .news
     .news-top 
-      .news-top-img 
-        img(srcSet= img1, alt="avata").news-top-img-main
-        img(srcSet= img2, alt="icon").news-top-img-no
-      .news-top-text 
-        .news-top-text-name 
-          .news-top-text-name-1= name
-          .news-top-text-name-2
-            if rate != " "
-              img(srcSet = rate, alt="icon")    
-        .news-top-text-date= date
+      .news-top-box
+        .news-top-img 
+          img(srcSet= img1, alt="avata").news-top-img-main
+          img(srcSet= img2, alt="icon").news-top-img-no
+        .news-top-text 
+          .news-top-text-name 
+            .news-top-text-name-1
+              span.news-top-text-name-1-name= name
+              span.news-top-text-name-1-inf= inf
+            .news-top-text-name-2
+              if rate != " "
+                img(srcSet = rate, alt="icon")    
+          .news-top-text-date= date
       .news-top-more
         img(srcSet=".././images/home/more.png 2x", alt="icon")
     .news-content 
@@ -147,3 +150,8 @@ mixin playlist(img, heading, date, title)
       .playlist-bottom-content-bot
         .bot-left 
         .bot-right
+mixin togle(name)
+  label.checkbox(for=name)
+    input.checkbox-input(type="checkbox" id=name name=name)
+    .checkbox-box
+      .checkbox-box-cr

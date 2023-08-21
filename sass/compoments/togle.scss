@@ -1,0 +1,35 @@
+@use "../abstracts" as abs;
+.checkbox {
+    display: inline-block;
+    cursor: pointer;
+    &-input {
+      display: none;
+      &:checked + .checkbox-box {
+        background-color: abs.$primary;
+        transition: all 0.3s linear;
+      }
+      &:checked + .checkbox-box .checkbox-box-cr {
+        background-color: abs.$natural-1;
+        left: 14px;
+        transition: all 0.3s linear;
+      }
+    }
+    &-box {
+      position: relative;
+      width: 30px;
+      height: 17px;
+      padding: 2px;
+      border-radius: 100rem;
+      background-color: abs.$gray-1;
+      &-cr {
+        position: absolute;
+        left: 2px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        height: 14px;
+        border-radius: 100rem;
+        background-color: abs.$natural-1;
+      }
+    }
+  }
