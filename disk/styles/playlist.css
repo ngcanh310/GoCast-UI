@@ -149,6 +149,11 @@ body {
      object-position: center;
   border-radius: 100rem;
 }
+@media screen and (max-width: 1023.8px) {
+  .topbar {
+    display: none;
+  }
+}
 
 .sidebar {
   padding: 48px 30px;
@@ -233,6 +238,11 @@ body {
   min-height: 100vh;
 }
 
+@media screen and (max-width: 1023.8px) {
+  .wraper {
+    display: block;
+  }
+}
 .heading {
   font-size: 24px;
   font-weight: 600;

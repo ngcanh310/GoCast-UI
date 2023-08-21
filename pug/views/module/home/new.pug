@@ -1,8 +1,8 @@
 section.new 
       .new-option
         .new-option-left 
-          each value in ["My Feed","Poplar Feed", "Recent"]
-            span.new-option-left-list= value
+          each value, index in ["My Feed","Poplar Feed", "Recent"]
+            span.new-option-left-list(class = `${ index == 0 ? 'is-active' : '' }`)= value
         .new-option-right 
           label.checkbox(for="checkbox")
             input.checkbox-input(type="checkbox" id="checkbox" name="margen")

@@ -4,12 +4,22 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
+  @media screen and (max-width: 1023.8px) {
+    display: block;
+    padding: 10px 24px;;
+  }
 }
 .left section {
   margin-bottom: 30px;
+  @media screen and (max-width: 1023.8px){
+    margin-bottom: 14px;
+  }
 }
 .right section {
   margin-bottom: 40px;
+  @media screen and (max-width: 1023.8px){
+   margin-bottom: 14px;
+  }
 }
 .left {
   margin-bottom: 85px;
@@ -19,8 +29,22 @@
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 31px;
+  padding-top: 6px;
+  @media screen and (max-width: 1023.8px) {
+    gap: 16.7px;
+    overflow-x: auto;
+    grid-template-columns: repeat(7, 50px);
+  }
   &-list {
     @include abs.fl(center, center, 7px);
+    @media screen and (max-width: 1023.8px) {
+      gap: 6px;
+    }
+    &:first-child{
+      @media screen and (max-width: 1023.8px) {
+        padding-left: 6px;
+      }
+    }
     flex-direction: column;
     &-name {
       color: abs.$gray-1;
@@ -31,6 +55,11 @@
       border-radius: 100rem;
       box-shadow: 0 0 0 4px white, 0 0 0 6px pink;
       background-color: pink;
+      flex: 0;
+      @media screen and (max-width: 1023.8px) {
+        width: 45.7px;
+        height: 45.7px;
+      }
     }
   }
 }
@@ -60,6 +89,9 @@
       flex-direction: column;
       margin-bottom: 20px;
       color: abs.$natural;
+      @media screen and (max-width: 1023.8px){
+        width: 262px;
+      }
     }
     &-button {
       @include abs.fl(center, center, 8px);
@@ -74,6 +106,24 @@
         padding: 2px;
       }
     }
+    &-vector{
+      position: absolute;
+      top: 36px;
+      right: 76px;
+      @media screen and (max-width: 1023.8px) {
+        right: 22px;
+        top: 60px;
+      }
+      
+    }
+    &-frame{
+      position: absolute;
+      bottom: 0;
+      right: 237px;
+      @media screen and (max-width: 1023.8px) {
+        right: 15px;
+        }
+    }
   }
   &-group {
     position: absolute;
@@ -84,6 +134,12 @@
     position: absolute;
     bottom: 0;
     right: 15px;
+    z-index: 2;
+  }
+  @media screen and (max-width: 1023.8px) {
+    .trending-img, .trending-group{
+      display: none;
+    }
   }
 }
 .new {
@@ -93,16 +149,21 @@
     &-left {
       @include abs.fl(center, center, 0);
       &-list {
+        white-space:nowrap;
         padding: 10px;
         color: abs.$gray-1;
         font-weight: 500;
         border-bottom: 1px solid abs.$bg-3;
-        &:hover {
-          color: abs.$primary;
-          font-weight: 600;
-          border-bottom: 1px solid abs.$primary;
-          cursor: pointer;
+        @media screen and (max-width: 1023.8px){
+          font-size: 13px;
+          line-height: 1.38;
         }
+      }
+      &-list.is-active{
+        color: abs.$primary;
+        font-weight: 600;
+        border-bottom: 1px solid abs.$primary;
+        cursor: pointer;
       }
     }
     &-right {
@@ -110,6 +171,11 @@
       & span {
         color: abs.$gray-1;
         font-weight: 500;
+      }
+      @media screen and (max-width: 1023.8px) {
+        span{
+          display: none;
+        } 
       }
     }
   }
@@ -423,6 +489,11 @@
   &-contain {
     @include abs.fl(space-between, center, 0);
   }
+}
+.inf-img{
+  width: 46px;
+  height: 46px;
+  border-radius: 6px;
 }
 .fl {
   &-input {

@@ -5,3 +5,8 @@
   grid-template-columns: 256px 1fr;
   min-height: 100vh;
 }
+@media screen and (max-width: 1023.8px){
+  .wraper{
+    display: block;
+  }
+}
