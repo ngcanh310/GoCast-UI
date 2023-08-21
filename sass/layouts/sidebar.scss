@@ -16,13 +16,13 @@
   gap: 6px;
   flex-direction: column;
   &-link {
+    padding: 8px 30px;
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 10px;
   }
   &-item {
-    padding: 8px 30px 8px 20px;
     border-radius: 12px;
     &:hover {
       background-color: #7141ef;

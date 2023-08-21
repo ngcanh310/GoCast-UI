@@ -196,7 +196,6 @@ body {
   gap: 10px;
 }
 .menu-item {
-  padding: 8px 30px 8px 20px;
   border-radius: 12px;
 }
 .menu-item:hover {
