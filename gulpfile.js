@@ -1,33 +1,28 @@
-const { src, dest, series, watch } = require('gulp');
+const { src, dest, watch } = require('gulp');
+const pug = require('gulp-pug');
+const sourcemaps = require('gulp-sourcemaps');
 
-// sass
-const scss = require('gulp-sass')(require('sass'));
-const autoPrefixer = require('gulp-autoprefixer')
+const PUG_URL = 'pug/*.pug';
+const SCSS_URL = 'sass/**/*.scss';
 
-function sass() {
-    return src('./sass/*.scss')
-        .pipe(scss())
-        .pipe(autoPrefixer('last 2 versions'))
-        .pipe(dest('./disk/styles/'))
+const sass = require('gulp-sass')(require('sass'));
+function css() {
+	return src(SCSS_URL)
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write())
+		.pipe(dest('dist/styles'));
 }
+exports.css = css;
 
-// pug
-const pug = require('gulp-pug')
-
-function code() {
-    return src('./pug/*.pug')
-        .pipe(pug())
-        .pipe(dest('./disk/html/'))
+function html() {
+	return src(PUG_URL)
+		.pipe(pug({ pretty: true }))
+		.pipe(dest('dist/html'));
 }
+exports.html = html;
 
-function watchTask() {
-    watch(
-            [
-                './sass/*.scss',
-                './pug/*.pug'
-            ],
-            series(sass, code)
-        )
-}
-
-exports.default = series(sass, code, watchTask);
+exports.watch = function () {
+	watch(SCSS_URL, css);
+	watch('pug/**/*.pug', html);
+};
