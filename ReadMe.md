@@ -1,10 +1,10 @@
   ## NOTE: 
   ## Folder:
   ### dist:  folder images(chứa ảnh), html(chứa file html), styles(chứa file css)
-   1. images: chứa ảnh
-    - .png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
-    - explore: chứa ảnh của riêng page explore. tương tự với home và trending, ...
-   ### sass: chứa các file scss chia 7:1
+    1. images: chứa ảnh
+     - .png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
+     - explore: chứa ảnh của riêng page explore. tương tự với home và trending, ...
+  ### sass: chứa các file scss chia 7:1
     1. abstracts: chứa css helper bao gồm biến, mixin
     2. base: Những phần css được áp dụng chung cho toàn bộ project
     3. compoments: Các thành phần có thể tái sử dụng như: button, togle, forms, ...
@@ -12,7 +12,7 @@
     5. pages: Dự án có nhiều page khác nhau. Đây là nơi định nghĩa styles cho từng trang
     6. themes: Các themes của trang
     7. vendors: chứa file từ bên thứ 3 ( hiện chưa có )
-   ### pug:
+  ### pug:
     1. views
      - layouts: chứa các file pug bố cục chính, tái sử dụng nhiều lần
       + dashboard: bố cục chung của các trang page
