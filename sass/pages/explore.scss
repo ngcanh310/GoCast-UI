@@ -1,6 +1,9 @@
 @use "../abstracts" as abs;
 .explore {
   padding: 40px 60px 150px 60px;
+  @media screen and (max-width: 1000px){
+    padding: 10px 24px; 
+  }
   container-type: inline-size;
   container-name: explore-container;
   &-top {

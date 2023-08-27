@@ -9,6 +9,9 @@
   container-type: inline-size;
   container-name: playlist-container;
   padding: 40px 60px 90px 60px;
+  @media screen and (max-width: 1000px) {
+    padding: 10px 24px;
+  }
   &-top {
     @container playlist-container (max-width: 1010px){
       .playlist-top-left{

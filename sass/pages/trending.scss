@@ -1,6 +1,9 @@
 @use "../abstracts" as abs;
 .content {
   padding: 40px 80px 55px 60px;
+  @media screen and (max-width: 1000px) {
+    padding: 10px 24px;
+  }
 }
 .podcast {
   margin-bottom: 70px;
