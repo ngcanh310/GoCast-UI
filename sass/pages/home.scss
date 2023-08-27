@@ -1,12 +1,20 @@
 @use "../abstracts" as abs;
+.main{
+  container-type: inline-size;
+  container-name: content-container;
+}
+.popular{
+  container-type: inline-size;
+  container-name: popular-container;
+}
 .content {
   padding: 30px 45px;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
-  @media screen and (max-width: 1023.8px) {
+  @container content-container (max-width: 990.8px) {
     display: block;
-    padding: 10px 24px;;
+    padding: 10px 24px;
   }
 }
 .left section {
@@ -22,6 +30,12 @@
   }
 }
 .popular-hosts {
+  padding-left: 7px;
+  @container popular-container (max-width:627px){
+    height:97px;
+  }
+  container-type: inline-size;
+  container-name: popular-hosts-container;
   position: relative;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -30,17 +44,12 @@
   @media screen and (max-width: 1023.8px) {
     gap: 16.7px;
     overflow-x: auto;
-    grid-template-columns: repeat(7, 50px);
+    grid-template-columns: repeat(7, 1fr);
   }
   &-list {
     @include abs.fl(center, center, 7px);
     @media screen and (max-width: 1023.8px) {
       gap: 6px;
-    }
-    &:first-child{
-      @media screen and (max-width: 1023.8px) {
-        padding-left: 6px;
-      }
     }
     flex-direction: column;
     &-name {
@@ -53,10 +62,10 @@
       box-shadow: 0 0 0 4px white, 0 0 0 6px pink;
       background-color: pink;
       flex: 0;
-      @media screen and (max-width: 1023.8px) {
-        width: 45.7px;
-        height: 45.7px;
-      }
+    }
+    @container popular-hosts-container (max-width: 644.8px){
+      width: 60px;
+      height: 87px;
     }
   }
 }
@@ -263,6 +272,8 @@
     }
   }
   &-content {
+    container-type: inline-size;
+    container-name: news-content-container;
     position: relative;
     border-bottom: 1px solid abs.$natural-2;
     padding: 20px;
@@ -276,9 +287,6 @@
       height: 152px;
       border-radius: 10px;
       flex-shrink: 0;
-      @media screen and (max-width: 1023.8px){
-        width: 100%;
-      }
     }
     &-more {
       @include abs.fl(flex-start, start, 0);

@@ -87,6 +87,8 @@
   }
 }
 .episdes {
+  container-type: inline-size;
+  container-name: top-right-container;
   &-choices {
     @include abs.fl(flex-start, center, 10px);
     &-choice {
@@ -118,6 +120,9 @@
       }
     }
     &-right {
+      @container top-right-container (max-width:660.8px){
+        display: none;
+      }
       z-index: 2;
       @include abs.fl(center, center, 0);
       position: relative;
