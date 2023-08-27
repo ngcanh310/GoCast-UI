@@ -118,6 +118,7 @@
       }
     }
     &-right {
+      z-index: 2;
       @include abs.fl(center, center, 0);
       position: relative;
       &-list {
@@ -172,21 +173,43 @@
     }
   }
   &-bottom {
+    container-type: inline-size;
+    container-name: episdes-bottom-container;
     &-contain {
+      @container episdes-bottom-container (max-width: 750.8px){
+        grid-template-columns: 1fr;
+      }
+      container-type: inline-size;
+      container-name: episdes-container;
       display: grid;
       gap: 30px;
       margin-bottom: 50px;
-      grid-template-columns: repeat(auto-fit, minmax(0, 546px));
+      grid-template-columns: 1fr 1fr;
       &-frame {
+        @container episdes-container (max-width: 990.8px){
+          flex-direction: column;
+          .episdes-bottom-contain-frame-img{
+            width: 100%;
+          }
+          .episdes-bottom-contain-frame-content{
+            width: 100%;
+          }
+          .content-time{
+            margin-top: 0;
+          }
+          .content-inf{
+            margin-top: 10px;
+          }
+        }
         box-shadow: -10px 24px 35px 0px rgba(227, 230, 236, 0.25),
-          -1px -3px 14px 0px rgba(227, 230, 236, 0.2);
-        position: relative;
+        -1px -3px 14px 0px rgba(227, 230, 236, 0.2);
         padding: 20px;
         border-radius: 20px;
-        @include abs.fl(center, center, 20px);
+        @include abs.fl(flex-start, center, 20px);
         &-content {
           display: flex;
           flex-direction: column;
+          flex: 1 0 0;
         }
       }
     }
@@ -233,7 +256,7 @@
 }
 .content-inf {
   margin-top: 25px;
-  @include abs.fl(flex-start, center, 12px);
+  @include abs.fl(flex-start, center, 16px);
   &-heart {
     display: inline-block;
     cursor: pointer;
@@ -276,12 +299,12 @@
     }
   }
 }
-.share {
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  right: 18px;
-  top: 18px;
+.content-box{
+  @include abs.fl(space-between, center, 0);
+}
+.share{
+  width: 24px;
+  aspect-ratio: 1 / 1;
 }
 .content-time-view,
 .content-time-time {

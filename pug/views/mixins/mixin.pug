@@ -115,7 +115,9 @@ mixin episdes(a)
   .episdes-bottom-contain-frame 
     img(srcSet=".././images/trending/host.png 2x", alt="image").episdes-bottom-contain-frame-img 
     .episdes-bottom-contain-frame-content
-      span.span-1 SHOULD I MIGRATE?
+      .content-box
+        span.span-1 SHOULD I MIGRATE?
+        img(src=".././images/trending/icon/share.png", alt="icon").share
       span.span-2 Perspective Podcast 
       .content-time 
         .content-time-view 
@@ -132,24 +134,29 @@ mixin episdes(a)
         label(for= a).content-inf-heart
           input(type="checkbox" id= a).content-inf-heart-input
           .content-inf-heart-box
-      img(src=".././images/trending/icon/share.png", alt="icon").share
 mixin explore(title, span)
   a(href="#").explore-bottom-box 
     img(src=".././images/explore/retangle.png", alt="retangle").explore-bottom-box-retangle
     img(src= title, alt="title").explore-bottom-box-top 
     span.explore-bottom-box-bottom= span
 mixin playlist(img, heading, date, title)
-  .playlist-bottom-box
-    .playlist-bottom-img
-      img(src= img, alt="image")
-    .playlist-bottom-content 
-      .playlist-bottom-content-top
-        .playlist-bottom-content-top-heading= heading
-        span.playlist-bottom-content-top-date= date
-      .playlist-bottom-content-mid= title 
-      .playlist-bottom-content-bot
-        .bot-left 
-        .bot-right
+  .play-list-bottom-contain  
+    .playlist-bottom-box
+      .playlist-bottom-img
+        img(src= img, alt="image")
+      .playlist-bottom-content 
+        .playlist-bottom-content-top
+          .playlist-bottom-content-top-heading= heading
+          span.playlist-bottom-content-top-date= date
+        .playlist-bottom-content-mid= title 
+        .playlist-bottom-content-bot
+          .bot-1 
+            img(src=".././images/playlist/1.png", alt="image")
+          .bot-2  
+            img(src=".././images/playlist/2.png", alt="image")
+          .bot-3 
+            img(src=".././images/playlist/3.png", alt="image")
+          .bot-4 41+
 mixin togle(name)
   label.checkbox(for=name)
     input.checkbox-input(type="checkbox" id=name name=name)

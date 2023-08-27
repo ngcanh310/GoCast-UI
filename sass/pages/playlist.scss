@@ -6,8 +6,15 @@
   margin-bottom: 14px;
 }
 .playlist {
+  container-type: inline-size;
+  container-name: playlist-container;
   padding: 40px 60px 90px 60px;
   &-top {
+    @container playlist-container (max-width: 1010px){
+      .playlist-top-left{
+        display: none;
+      }
+    }
     @include abs.fl(space-between, center, 0);
     margin-bottom: 20px;
     &-right-title {
@@ -68,14 +75,26 @@
       }
     }
   }
+  .play-list-bottom-contain{
+    display: flex;
+    @container playlist-container (max-width: 1010px){
+      overflow-x: auto;
+    }
+  }
   &-bottom {
+    container-type: inline-size;
+    container-name: playlist-bottom;
+    @container playlist-container (max-width: 1010px){
+      grid-template-columns: 1fr;
+    }
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     &-box {
+      flex: 0 0 520px;
       height: 158px;
       padding: 14px 20px;
-      @include abs.fl(space-between, center, 20px);
+      @include abs.fl(flex-start, center, 20px);
       box-shadow: -10px 24px 35px 0px rgba(227, 230, 236, 0.25),
         -1px -3px 14px 0px rgba(227, 230, 236, 0.2);
       border-radius: 10px;
@@ -117,6 +136,42 @@
         font-size: 13px;
         font-weight: 400;
         line-height: 146.154%; /* 146.154% */
+      }
+      &-bot{
+        --gap: -45%;
+        display: flex;
+        flex:0 0 0;
+        .bot-1, .bot-2, .bot-3{
+          border-radius: 100rem;
+          overflow: hidden;
+        }
+        .bot-4{
+          width: 44px;
+          height: 44px;
+          display: flex;
+          padding: 12px 10px 13px 10px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100rem;
+          border: 2px solid abs.$color-main;
+          background-color: abs.$natural-2;
+          color: abs.$gray-1;
+          font-size: 13px;
+          font-weight: 400;
+          line-height: 146.154%; /* 146.154% */
+        }
+        .bot-4, .bot-1, .bot-2, .bot-3{
+          box-shadow: 0px 0px 0px 3px #FFF;
+        }
+        .bot-2{
+             transform: translateX(var(--gap));
+        }
+        .bot-3{
+             transform: translateX(calc(var(--gap) * 2));
+        }
+        .bot-4{
+          transform: translateX(calc(var(--gap) * 3));
+        }
       }
     }
   }
