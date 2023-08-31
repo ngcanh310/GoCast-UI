@@ -1,5 +1,6 @@
 @use "../abstracts" as abs;
 .explore {
+  margin-bottom: 70px;
   padding: 40px 60px 150px 60px;
   @media screen and (max-width: 1000px){
     padding: 10px 24px; 

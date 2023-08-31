@@ -15,30 +15,31 @@
     margin-bottom: 40px;
   }
   &-list {
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
     color: #fff;
     display: flex;
     gap: 30px;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
     &::-webkit-scrollbar {
-      height: 10px;
+      width: 5px;
     }
-    &::-webkit-scrollbar-thumb {
+    &::-webkit-scrollbar-thumb{
       background-color: pink;
-      border-radius: 24px;
     }
-    &::-webkit-scrollbar-track {
-      border-radius: 24px;
-      background-color: transparent;
+    &::-webkit-scrollbar-track{
+    background-color: transparent;
+    }
+    @media screen and (max-width: 700px) {
+      &::-webkit-scrollbar{
+        display: none;
+        width: 0;
+      }
     }
     &-card {
       flex: 0 0 628px;
       background-color: #050f16;
       border-radius: 24px;
-      scroll-snap-align: center;
       display: flex;
       overflow: hidden;
       &-img {
@@ -90,6 +91,7 @@
   }
 }
 .episdes {
+  margin-bottom: 80px;
   container-type: inline-size;
   container-name: top-right-container;
   &-choices {
@@ -186,6 +188,7 @@
     &-contain {
       @container episdes-bottom-container (max-width: 750.8px){
         grid-template-columns: 1fr;
+        margin-bottom: 20px;
       }
       container-type: inline-size;
       container-name: episdes-container;

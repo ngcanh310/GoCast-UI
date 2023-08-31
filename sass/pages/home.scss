@@ -47,9 +47,16 @@
   @media screen and (max-width: 1023.8px) {
     gap: 16.7px;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
     grid-template-columns: repeat(7, 1fr);
+    &::-webkit-scrollbar{
+      display: none;
+      width: 10;
+    }
   }
   &-list {
+    scroll-snap-align: center;
     @include abs.fl(center, center, 7px);
     @media screen and (max-width: 1023.8px) {
       gap: 6px;
@@ -138,7 +145,6 @@
   &-group {
     position: absolute;
     right: 50%;
-    transform: translateX(50%);
   }
   &-img {
     position: absolute;

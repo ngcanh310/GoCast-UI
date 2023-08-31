@@ -1,6 +1,6 @@
 @use "./base/reset.scss";
 @use "./base/typography.scss";
-
+@use "./compoments/index.scss";
 @use "./layouts";
-@use "./compoments";
-@use "./pages/home.scss";
+
+@use "./pages/sub.scss";

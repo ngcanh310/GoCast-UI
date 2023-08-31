@@ -67,9 +67,7 @@ mixin new(img1, img2, name, inf, rate, date, imgmain, span1, span2, span3, time1
       .news-footer-left
         each value in [".././images/home/heart.png 2x", ".././images/home/magic-star.png 2x", ".././images/home/music.png 2x"]
           img(srcSet= value, alt="icon")
-      .news-footer-right
-        img(srcSet=".././images/home/play-1.png 2x", alt="icon").news-footer-right-img
-        span.news-footer-right-text Play Episode
+      +button("Play Episode", ".././images/home/play-1.png")
 mixin suggest(name, img, acong, ok)
   .right-1-inf-contain
     .inf
@@ -134,7 +132,7 @@ mixin episdes(a)
         label(for= a).content-inf-heart
           input(type="checkbox" id= a).content-inf-heart-input
           .content-inf-heart-box
-mixin explore(title, span)
+mixin explore(title, sspan)
   a(href="#").explore-bottom-box 
     img(src=".././images/explore/retangle.png", alt="retangle").explore-bottom-box-retangle
     img(src= title, alt="title").explore-bottom-box-top 
@@ -162,3 +160,36 @@ mixin togle(name)
     input.checkbox-input(type="checkbox" id=name name=name)
     .checkbox-box
       .checkbox-box-cr
+mixin suber(img, name, title, color)
+  .sub-top-content-list 
+    img(src= img, alt="image").sub-top-content-list-img
+    .sub-top-content-list-title
+      h4= name 
+      span= title
+mixin button(text, img)
+  button.button  
+    if img
+      img(src= img, alt="icon").button-img
+    span.button-text= text
+mixin latest(img)
+  .latest-top-content-list  
+    .latest-top 
+      .latest-top-content
+        img.latest-top-content-img(src= img, alt="images")
+        .latest-top-content-more 
+          span.more-1 Perspective Podcast (Ep. 1)
+          .more-2 Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+          .more-3 
+            .more-3-date
+              img(srcSet=".././images/sub/time-cr.png 2x", alt="icon").more-3-date-img
+              span.more-3-date-text 11 dayes ago
+            .more-3-time
+              img(srcSet=".././images/sub/timer.png 2x", alt="icon").more-3-time-img
+              span.more-3-time-text 45mins 10 Sec
+          span.more-4 Play Phsilosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin...
+    .latest-footer 
+      .latest-footer-left
+        img(srcSet= ".././images/sub/heart.png 2x", alt="icon")
+        img(srcSet=".././images/sub/magic-star.png 2x", alt="icon")
+        img(srcSet= ".././images/sub/music.png 2x", alt="icon")
+      +button("Play Episode", ".././images/home/play-1.png")

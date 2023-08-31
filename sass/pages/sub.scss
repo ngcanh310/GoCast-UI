@@ -1,0 +1,174 @@
+@use "../abstracts" as abs;
+.sub-top{
+    padding: 40px 60px 0 60px;
+    margin-bottom:50px;
+    &-heading{
+       margin-bottom: 20px;
+       &-main{
+        color: abs.$black-1;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 109.091%; /* 109.091% */
+        margin-bottom: 12px;
+       }
+       &-tittle{
+        color: abs.$gray-2;
+        font-size: 14px;
+        font-weight: 500;
+        line-height:  142.857%; /* 142.857% */
+       }
+    }
+    &-content{
+        display: flex;
+        gap: 37px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        &::-webkit-scrollbar{
+            display: none;
+            width: 0;
+        }
+        &-list{
+            border-radius: 10px;
+            background: #FFF;
+            box-shadow: -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20);
+            scroll-snap-align: center;
+            flex: 0 0 184px;
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+            justify-content: center;
+            align-items: center;
+            &-img{
+                border-radius: 100rem;
+                background-color: pink;
+            }
+            &-title{
+                & h4{
+                    color: abs.$black-1;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 144.444%; /* 144.444% */
+                }
+                & span{
+                    color: abs.$gray-2;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 20px; /* 142.857% */
+                }
+            }
+        }
+    }
+}
+
+.sub-bottom{
+    container-type: inline-size;
+    container-name: sub-container;
+    padding: 40px 60px 0 60px;
+    &-heading{
+        margin-bottom: 22px;
+        color: abs.$black-1;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 24px; /* 109.091% */
+    }
+}
+.sub-bottom-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap :32px;
+    @container sub-container (max-width: 1039.8px){
+        grid-template-columns: 1fr;
+    }
+    container-type: inline-size;
+    container-name: content-container;
+}
+.latest-top-content-list{
+    padding: 20px;
+    border: 1px solid abs.$natural-2;
+    background-color: abs.$color-main;
+    border-radius: 10px;
+}
+.latest-top{
+    border-radius: 10px;
+    padding-bottom: 20px;
+    &-content{
+        @container content-container (max-width:512px){
+            flex-direction: column;
+            &-img{
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+        }
+        display: flex;
+        gap:20px;
+      &-img{
+        border-radius: 10px;
+      }
+    }
+    border-bottom: 1px solid #F0F3F6;
+}
+.latest-footer{
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-left{
+       display: flex;
+       justify-content: start;
+       align-items: center;
+       gap: 16px;
+    }
+}
+.more-1{
+    color:abs.$gray-2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 142.857% ; /* 142.857% */
+    margin-bottom: 6px;
+}
+.more-2{
+    color: abs.$black-1;
+font-weight: 500;
+line-height: 142.857%; /* 142.857% */
+margin-bottom: 9px;
+}
+.more-4{
+    color: abs.$black-1;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 146.154%; /* 146.154% */
+}
+.more-3{
+    display: flex;
+    justify-content: start;
+    align-self: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    &-date{
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        color: abs.$gray-2;
+    }
+    &-time{
+        display: flex;
+        color :abs.$gray-2;
+        gap: 4px;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 800px) {
+    .sub-top-content{
+      gap: 20px;
+    }    
+    .sub-top{
+        margin-bottom: 25px;
+        padding: 20px 24px;
+    }
+    .sub-bottom{
+        margin-bottom: 70px;
+        padding: 20px 24px;
+    }
+}

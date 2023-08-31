@@ -1,0 +1,16 @@
+@use "../abstracts" as abs;
+.button{
+   background-color: abs.$primary;
+   padding: 8px 14px;
+   display: flex;
+   gap: 8px;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   &-text{
+    color: abs.$neutral-1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 142.857%; /* 142.857% */
+   }
+} 

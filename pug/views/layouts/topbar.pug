@@ -5,9 +5,7 @@
     img(src=".././images/search.png", alt="icon").topbar-search-icon
     input(type=text  placeholder="Search 2+ million podcasts and listeners").topbar-search-box
   .topbar-right
-    button.topbar-right-upload  
-      img(src=".././images/upload.png", alt="icon")
-      span Upload 
+    +button("Upload", ".././images/upload.png") 
     a(href="#").topbar-right-mess
       img(src=".././images/mess.png", alt="icon")
     a(href="#").topbar-right-noti
