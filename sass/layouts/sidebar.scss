@@ -56,3 +56,8 @@
     line-height: 142.857%; /* 142.857% */
   }
 }
+@media screen and (max-width: 1007px) {
+    .sidebar{
+      display: none;
+    }
+}

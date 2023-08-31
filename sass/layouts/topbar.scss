@@ -1,11 +1,23 @@
 @use "../abstracts" as abs;
 .topbar {
+  container-type: inline-size;
+  container-name: topbar-container;
   padding: 24px 56px 24px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid abs.$natural-2;
+  &-logo{
+    display: none;
+    @container topbar-container (max-width: 480px){
+      flex-shrink: 0;
+      display: block;
+    }
+  }
   &-search {
+    @container topbar-container (max-width: 480px){
+      display: none;
+    }
     padding: 12px 20px;
     border-radius: 12px;
     background-color: abs.$natural-2;
@@ -24,11 +36,24 @@
   &-right {
     @include abs.fl(space-between, center, 24px);
     &-upload {
+      @container topbar-container (max-width: 740px){
+        display: none;
+      }
       @include abs.fl(center, center, 6px);
       border-radius: 8px;
       padding: 12px 16px;
       background-color: abs.$primary;
       color: abs.$neutral-1;
+    }
+    &-mess{
+      @container topbar-container (max-width: 740px){
+        display: none;
+      }
+    }
+    &-noti{
+      @container topbar-container (max-width: 740px){
+        display: none;
+      }
     }
     &-pro {
       width: 48px;
@@ -37,9 +62,6 @@
         @include abs.cover();
         border-radius: 100rem;
       }
-    }
-  }
-  @media screen and (max-width: 1023.8px){
-    display: none;
+    } 
   }
 }
