@@ -2,13 +2,13 @@ aside.sidebar
   a.sidebar-logo(href= "./index.html")
     img(src=".././images/logo.png", alt="logo")
   ul.menu
-    each value in [{text: "Home", img:"home", href: "./index.html"}, {text:"Trending", img:"trend", href: "./trending.html"}, {text: "Explore Topics", img:"explore",href: "./explore.html"}, {text: "Playlist", img:"playlist", href: "./playlist.html"}, {text: "Subscriptions", img:"sub" , href: "./sub.html"},]
+    each value in [{text: "Home", img:"home", href: "./index.html"}, {text:"Trending", img:"trend", href: "./trending.html"}, {text: "Explore Topics", img:"explore",href: "./explore.html"}, {text: "Playlist", img:"playlist", href: "./playlist.html"}, {text: "Subscriptions", img:"sub" , href: "./sub.html"}]
       +menu(value.text, value.img, value.href)
   ul.menu  
     h3.menu-heading Podcasters
-    each value in [{text: "Dashboard", img: "dash"},{text: "Episodes", img:"ep"},{text: "Team", img:"team"} ,{text: "Subscribers", img:"subs"}]
-      +menu(value.text, value.img)
+    each value in [{text: "Dashboard", img: "dash", href:"./dash.html"},{text: "Episodes", img:"ep", href:"./epi.html"},{text: "Team", img:"team", href:"./team.html"} ,{text: "Subscribers", img:"subs", href:"./subt.html"}]
+      +menu(value.text, value.img, value.href)
   ul.menu  
     h3.menu-heading Community
-    each value in [{text: "Leaderboard", img:"lead"}]
-      +menu(value.text, value.img)
+    each value in [{text: "Leaderboard", img:"lead", href:"./lead.html"}]
+      +menu(value.text, value.img, value.href)

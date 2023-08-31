@@ -2,11 +2,14 @@
 .button{
    background-color: abs.$primary;
    padding: 8px 14px;
+   border-radius: 8px;
    display: flex;
-   gap: 8px;
    justify-content: center;
    align-items: center;
-   border-radius: 8px;
+   gap: 8px;
+   &-img{
+      display: inline;
+   }
    &-text{
     color: abs.$neutral-1;
     font-size: 14px;
@@ -14,3 +17,7 @@
     line-height: 142.857%; /* 142.857% */
    }
 } 
+@media screen and (max-width: 750px) {
+   .button
+   {display: none;}
+}

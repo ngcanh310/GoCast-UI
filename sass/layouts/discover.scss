@@ -1,0 +1,22 @@
+@use "../abstracts" as abs;
+.discover{
+    display: block;
+    position: fixed;
+    right: 24px;
+    bottom: 92px;
+    border-radius: 60px;
+    background-color: linear-gradient(92deg, #415EF4 0.33%, #7141EF 28.14%);
+    box-shadow: 0px 0px 0px 0px rgba(108, 93, 211, 0.40);
+    & img{
+        padding: 8px;
+        width: 40px;
+        border-radius: 100rem;
+    aspect-ratio: 1/1;
+    background-color: abs.$primary;
+}
+}
+@media screen and (min-width: 1023.8px) {
+    .discover{
+        display: none;
+    }
+}

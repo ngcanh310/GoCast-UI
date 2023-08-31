@@ -1,4 +1,7 @@
 @use "../abstracts" as abs;
+// .main{
+//   position: relative;
+// }
 .wraper {
   background-color: abs.$color-main;
   display: grid;
