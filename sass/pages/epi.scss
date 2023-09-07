@@ -1,0 +1,31 @@
+@use "../abstracts" as abs;
+
+.episodes{
+    padding: 40px 60px 70px 60px;
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-heading{
+            color: abs.$black-1;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 109.091% ; /* 109.091% */
+        }
+        &-up{
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 16px;
+            gap: 6px;
+            background-color: abs.$primary-shades-9;
+            & span{
+                color: abs.$primary;
+                font-weight: 500;
+                line-height: 142.857%; /* 142.857% */
+            }
+        }
+    }
+
+}
