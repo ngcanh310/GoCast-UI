@@ -1,4 +1,6 @@
   ## NOTE: 
+    Dự án thuần html css được vừa học vừa thực hành
+    Link Figma dự án https://drive.google.com/file/d/1MmuW-3oKvmHm7nTNclIjKU7c2zrxafAL/view?usp=drive_link
   ## Folder:
   ### dist:  folder images(chứa ảnh), html(chứa file html), styles(chứa file css)
     1. images: chứa ảnh
