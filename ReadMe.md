@@ -11,7 +11,7 @@
     2. base: Những phần css được áp dụng chung cho toàn bộ project
     3. compoments: Các thành phần có thể tái sử dụng như: button, togle, forms, ...
     4. layouts: chứa code định nghĩa cho layout của toàn project 
-    5. pages: Dự án có nhiều page khác nhau. Đây là nơi định nghĩa styles cho từng trang
+    5. pages: Dự án có nhiều page khác nhau. Đây là nơi định nghĩa styles cho từng page
     6. themes: Các themes của trang
     7. vendors: chứa file từ bên thứ 3 ( hiện chưa có )
   ### pug:
@@ -19,5 +19,5 @@
      - layouts: chứa các file pug bố cục chính, tái sử dụng nhiều lần
       + dashboard: bố cục chung của các trang page
      - mixins: chứa file mixin.pug
-     - module: chứa các phần nhỏ bên trong 1 page để thuận tiện cho việc quản lý, fix bug. Như trang page home có 8 section, trong folde home có 8 file pug con.
+     - module: chứa các phần nhỏ bên trong 1 page để thuận tiện cho việc quản lý, fix bug. Như trong trang page home có 8 section, từ đó trong folder home sẽ có 8 file pug con, mỗi file apug là 1 section. Tương tự đối với các trang page khác
 to be continue ...
