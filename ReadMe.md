@@ -4,7 +4,7 @@
   ## Folder:
   ### dist:  
     ### images(chứa ảnh)
-      ####png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
+      #### png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
       #### explore: chứa ảnh của riêng page explore. tương tự với home và trending, ...
     ### html(chứa file html)
     ### styles(chứa file css)
