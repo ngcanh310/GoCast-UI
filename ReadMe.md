@@ -3,11 +3,11 @@
     Link Figma dự án https://drive.google.com/file/d/1MmuW-3oKvmHm7nTNclIjKU7c2zrxafAL/view?usp=drive_link
   ## Folder:
   ### dist:  
-    #### images(chứa ảnh)
-      ##### png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
-      ##### explore: chứa ảnh của riêng page explore. tương tự với home và trending, ...
-    #### html(chứa file html)
-    #### styles(chứa file css)
+    1. images(chứa ảnh)
+      - png: các file .png là ảnh của sidebar và topbar. Dùng chung cho tất cả các page
+      - explore: chứa ảnh của riêng page explore. tương tự với home và trending, ...
+    2. html(chứa file html)
+    3. styles(chứa file css)
   ### sass: chứa các file scss chia 7:1
     1. abstracts: chứa css helper bao gồm biến, mixin
     2. base: Những phần css được áp dụng chung cho toàn bộ project
