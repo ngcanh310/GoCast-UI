@@ -24,14 +24,6 @@
      - module: chứa các phần nhỏ bên trong 1 page để thuận tiện cho việc quản lý, fix bug. Như trong trang page home có 8 section, từ đó trong folder home sẽ có 8 file pug con, mỗi file apug là 1 section. Tương tự đối với các trang page khác
   ### demo:
   1. Home page
-    ![Home page](./dist/images/demo/home.png)
-  2. Trending page
-    ![Trending page](./dist/images/demo/trending.png)
-  3. Explore page
-    ![Explore page](./dist/images/demo/explore.png)
-  4. Playlist page
-    ![Playlist page](./dist/images/demo/playlist.png)
-  5. Sub page
-    ![Sub page](./dist/images/demo/sub.png)
+
 
 to be continue ...
